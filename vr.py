@@ -8,13 +8,13 @@ print("Что ж, " +myName+" , я загадываю число от 1 до 100
 for attNumber in range(30):
     print("Попробуй угадать.") #Четыре пробела перед именем функции
     guess = input()
+while not guess.isnumberic():
+    print("Вы должны были ввести только цифры")
     guess = int(guess)
-    if guess < number:
-        print("Твое число слишком маленькое.") #Восемь пробелов
+if guess < number:
+    print("Твое число слишком маленькое.") #Восемь пробелов
     if guess > number:
         print("Твое число слишком большое.") #Восемь пробелов
-    if guess == number:
-        break
 if guess == number:
     attNumber = str(attNumber + 1)
     print("Отлично, "+ myName+"! Ты справился за "+attNumber+" попытки!")
